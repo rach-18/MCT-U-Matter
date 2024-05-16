@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../Images/scene.png");
+    /* background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(Images/landing.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+}
+
+.scene-content {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* .scene {
+    background-image: url("https://umatter.netlify.app/images/music-images/nature-instrument/healing%20water.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../Images/scene-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 300ms;
+}
+
+.scene:hover {
+    transform: scale(1.02);
+}
+
+.scene-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../Images/scene-1.jpg);
+} */
+
+#play-btn {
+    transition: all 300ms;
+}
+
+/* .scene-name {
+    transition: all 300ms;
+}
+
+.scene-name:hover {
+    background-color: #315547;
+    color: white;
+} */

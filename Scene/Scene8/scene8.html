@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scenes.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Autumn</title>
+  </head>
+  <body class="h-screen relative overflow-hidden">
+    <div class="flex justify-end w-full text-3xl pt-5 pr-10 text-white">
+      <a href="../scene.html"><i class="fa-solid fa-xmark"></i></a>
+    </div>
+    <div class="flex items-end h-[85%] ml-5">
+      <div class="flex flex-wrap items-center md:gap-5 gap-3 lg:text-xl md:text-[0.8rem] text-[0.6rem] font-bold text-white">
+        <!-- <i class="fa-solid fa-chevron-left"></i> -->
+        <i id="playPauseButton" class="fa-solid fa-play cursor-pointer"></i>
+        <p
+          id="two-min"
+          class="bg-white px-4 py-1 rounded-full cursor-pointer text-[#1A4D2E] text-center"
+        >
+          2 minutes
+        </p>
+        <p
+          id="five-min"
+          class="bg-white px-4 py-1 rounded-full cursor-pointer text-[#1A4D2E] text-center"
+        >
+          5 minutes
+        </p>
+        <p
+          id="ten-min"
+          class="bg-white px-4 py-1 rounded-full cursor-pointer text-[#1A4D2E] text-center"
+        >
+          10 minutes
+        </p>
+        <p id="timerDisplay" class="lg:text-xl md:text-[0.8rem] sm:text-[0.5rem] text-xl">10:00</p>
+      </div>
+    </div>
+    <video
+      muted
+      id="videoElement"
+      src="../Videos/Autumn.mp4"
+      loop
+      class="fixed top-0 z-[-2] object-fill w-full h-full"
+    ></video>
+    <audio
+      id="audioElement"
+      src="../Audio/autumn-morning-woodland-with-birdsong-and-distant-waterfall-173326.mp3"
+      loop
+    ></audio>
+
+    <script src="../scenes.js"></script>
+  </body>
+</html>
