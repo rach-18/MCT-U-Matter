@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Home Page</title>
 </head>
 <body class="overflow-x-hidden">
@@ -58,26 +59,26 @@
             <p class="font-bold text-xl">How Can We Help You?</p>
             <p class="text-lg">U Matter is your sanctuary for relaxation and rejuvenation. Dive into our collection of meditation music, nature scenes, and immersive sounds to calm your mind and soothe your soul. Engage with our AI voice assistant for personalized guidance and breathing exercises, designed to help you navigate stress and anxiety. Let go of the chaos and embrace tranquility with U Matter – your oasis of peace awaits.</p>
             <div class="flex flex-wrap justify-evenly mt-10 gap-5">
-                <div class="img-1 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end">
-                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] rounded-b-full text-white">
+                <div class="img-1 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end" data-aos="fade-down" data-aos-duration="1000">
+                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] w-full rounded-b-full text-white">
                         <p class="font-bold sm:font-lg">Music</p>
                         <p class="text-center w-[80%] sm:text-md text-xs">Music to help you focus and relax.</p>
                     </div>
                 </div>
-                <div class="img-2 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end">
-                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] rounded-b-full text-white">
+                <div class="img-2 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] w-full rounded-b-full text-white">
                         <p class="font-bold sm:font-lg">Scene</p>
                         <p class="text-center w-[80%] sm:text-md text-xs">Nature scenes with sounds to enjoy while relaxing.</p>
                     </div>
                 </div>
-                <div class="img-3 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end">
-                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] rounded-b-full text-white">
+                <div class="img-3 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] w-full rounded-b-full text-white">
                         <p class="font-bold sm:font-lg">Breathing exercises</p>
                         <p class="text-center w-[80%] sm:text-md text-xs">Guides you through the breathing exercise.</p>
                     </div>
                 </div>
-                <div class="img-4 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end">
-                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] rounded-b-full text-white">
+                <div class="img-4 sm:w-[15rem] sm:h-[15rem] w-[10rem] h-[10rem] rounded-full flex items-end" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="flex flex-col items-center pb-6 sm:h-[7.5rem] h-[5rem] w-full rounded-b-full text-white">
                         <p class="font-bold sm:font-lg">Talk to hope</p>
                         <p class="text-center w-[80%] sm:text-md text-xs">A voice assistant that always here to talk and to listen.</p>
                     </div>
@@ -89,8 +90,11 @@
         </div>
     </div>
     
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="home.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

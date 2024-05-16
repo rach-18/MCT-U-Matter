@@ -10,6 +10,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Realx & Breathe</title>
 </head>
 <body class="overflow-x-hidden">
@@ -48,7 +49,7 @@
     </nav>
 
     <div class="breathing-relax-content flex flex-col items-center justify-center gap-10 my-10">
-        <div class="flex flex-wrap items-center justify-evenly py-5 px-5 rounded-3xl text-[#1A4D2E] bg-white w-[80%]">
+        <div class="flex flex-wrap items-center justify-evenly py-5 px-5 rounded-3xl text-[#1A4D2E] bg-white w-[80%]" data-aos="fade-right" data-aos-duration="1000">
             <img src="../Images/breathing1.svg" class="lg:w-[15%] md:w-[25%] sm:w-[35%] w-[50%]" alt="">
             <div class="flex flex-col gap-2 lg:items-start items-center">
                 <p class="font-bold md:text-xl text-lg">Deep Brething</p>
@@ -57,7 +58,7 @@
                 <a href="Breathe1/breathe1.html" class="bg-[#1A4D2E] flex items-center justify-center text-white py-2 lg:w-[14%] md:w-[15%] w-[28%] rounded-lg md:text-lg text-sm">Begin</a>
             </div>
         </div>
-        <div class="flex flex-wrap items-center justify-evenly py-5 px-5 rounded-3xl text-[#1A4D2E] bg-white w-[80%]">
+        <div class="flex flex-wrap items-center justify-evenly py-5 px-5 rounded-3xl text-[#1A4D2E] bg-white w-[80%]" data-aos="fade-left" data-aos-duration="1000">
             <img src="../Images/breathing2.png" class="lg:w-[24%] md:w-[35%] sm:w-[45%] w-[65%] lg:hidden block transform scale-x-[-1] mb-4" alt="">
             <div class="flex flex-col gap-2 lg:items-start items-center">
                 <p class="font-bold md:text-xl text-lg">4-7-8 Technique</p>
@@ -69,7 +70,11 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="relax-breathe.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

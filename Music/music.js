@@ -1,19 +1,24 @@
-// // function callApi(url)
-// // {
-// //     const myPromise = new Promise( (resolve,reject) => {
-// //         fetch(url)
-// //         .then( res => res.json())
-// //         .then( data => {
-// //             resolve(data)
-// //         })
-// //         .catch(err => {
-// //             reject(err)
-// //         })
-// //     })
+// function callApi(url)
+// {
+//     const myPromise = new Promise( (resolve,reject) => {
+//         fetch(url)
+//         .then( res => res.json())
+//         .then( data => {
+//             resolve(data)
+//         })
+//         .catch(err => {
+//             reject(err)
+//         })
+//     })
 
-// //     return myPromise;
+//     return myPromise;
    
-// // }
+// }
+
+// callApi("https://rapidapi.com/Glavier/api/spotify23/")
+// .then((data) => {
+//     console.log(data);
+// })
 
 // // callApi("https://rapidapi.com/Glavier/api/spotify23")
 // // .then((data) => {
