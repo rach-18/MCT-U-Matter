@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hope ChatBot</title>
+  </head>
+  <body class="w-full h-screen flex flex-col">
+    <nav class="border-gray-200 bg-[#13854E]">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="../../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="https://umatter.netlify.app/images/home-img/logo.svg" class="h-8" alt="U Matter Logo" />
+              <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+              <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                  <li>
+                      <a href="../../Home/home.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Home</a>
+                  </li>
+                  <li>
+                      <a href="../../Music/music.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Music</a>
+                  </li>
+                  <li>
+                      <a href="../../Scene/scene.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Scene</a>
+                  </li>
+                  <li>
+                      <a href="../../Relax and Breathe/relax-breathe.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Relax & Breathe</a>
+                  </li>
+                  <li>
+                      <a href="index.html" class="block py-2 px-3 text-[#1A4D2E] md:bg-transparent md:p-0 ">Talk To Hope</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <main class="md:w-[90%] w-full md:mx-auto mx-0 mt-2 rounded-3xl h-[88%] flex flex-col justify-end">
+    <!-- <header class="p-2 bg-[#a1d99b] flex gap-5 items-center rounded-t-3xl">
+      <img src="chatbot.jpg" class="w-10 h-10 rounded-lg" alt="hope chatbot">
+      <h1 class="text-[#31a354] text-lg font-medium">Hope Chatbot</h1>
+    </header> -->
+    <div class="flex-1 overflow-y-auto">
+      <div class="p-2 flex flex-col gap-4" id="chat-container">
+        <!-- User Chat -->
+        <!-- AI Chat -->
+        <div class="flex gap-2 justify-end">
+          <pre class="bg-[#a1d99b] text-[#31a354] p-1 rounded-md shadow-md max-w-[80%] text-wrap">Hello I am Hope! What do you want to talk about today?</pre>
+          <img src="chatbot.jpg" alt="" class="w-10 h-10 rounded-full">
+      </div>
+      </div>
+    </div>
+    <!-- Prompt -->
+    <form method="post" class="p-2 h-fit flex" id="chat-form">
+      <input name="prompt" id="prompt" cols="30" rows="4" class="w-full p-2 rounded-md resize-none focus:outline-none" placeholder="Enter message here...">
+      <button type="submit" class="md:w-[10%] w-[18%] p-1 bg-[#31a354] rounded text-white">Send</button>
+    </form>
+  </main>
+    
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

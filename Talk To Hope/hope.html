@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hope.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <title>Talk To Hope</title>
+</head>
+<body class="overflow-x-hidden">
+    <nav class="border-gray-200 bg-[#13854E]">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://umatter.netlify.app/images/home-img/logo.svg" class="h-8" alt="U Matter Logo" />
+                <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
+                    <li>
+                        <a href="../Home/home.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Home</a>
+                    </li>
+                    <li>
+                        <a href="../Music/music.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Music</a>
+                    </li>
+                    <li>
+                        <a href="../Scene/scene.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Scene</a>
+                    </li>
+                    <li>
+                        <a href="../Relax and Breathe/relax-breathe.html" class="block py-2 px-3 text-gray-900 hover:text-[#1A4D2E] md:p-0 dark:text-white">Relax & Breathe</a>
+                    </li>
+                    <li>
+                        <a href="hope.html" class="block py-2 px-3 text-[#1A4D2E] md:bg-transparent md:p-0 ">Talk To Hope</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="w-screen h-screen grid justify-center" onload="start()">
+        <div id="main" class="w-screen h-screen max-w-[540px]">
+            <h2 class="text-center bg-[#1c1c46] text-white py-3 mb-5 text-xl font-bold">Talk To Hope</h2>
+    
+            <div id="msg_area" class="h-[82%] px-5 overflow-y-scroll scroll-smooth">
+                <div id="robot" class="flex items-center">
+                    <div id="bot" class="w-[50px] h-[50px] rounded-full m-2"></div>
+                    <h3 class="text-lg">Hope ChatBot</h3>
+                </div>
+            </div>
+    
+            <div id="input" class="h-[7%] min-h-[42px] grid mx-4 my-2 rounded-3xl">
+                <input type="text" placeholder="New Message" id="text" class="outline-none text-lg bg-[#ececee] text-[#333] px-2 border border-[#777]">
+                <button id="send" class="outline-none text-lg text-[#eee] bg-[#1c1c46] border-0 rounded-full">Send <i class="fa fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div id="indicators-carousel" class="relative w-[60%] mx-auto mt-10" data-carousel="static">
+        <div class="commands relative h-56 overflow-hidden rounded-lg md:h-96 text-[#1A4D2E]">
+            <div class="hidden duration-700 ease-in-out flex items-center justify-center" data-carousel-item="active">
+                <p class="font-bold text-3xl">Let's see what we can talk about!</p>
+            </div>
+            <div class="hidden duration-700 ease-in-out py-5" data-carousel-item>
+                <div class="mx-16">
+                    <p class="font-bold text-2xl text-center mb-5">Greetings</p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Hi</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Hello</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Hey</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">What's up?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Good morning</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Good afternoon</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Good evening</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Good night</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Merry Christmas</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Happy New Year</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Happy Valentine's Day</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="mx-16">
+                    <p class="font-bold text-2xl text-center mb-5">Commands</p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Google</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Youtube</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Twitter</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Facebook</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Instagram</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Github</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open w3school</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Stackoverflow</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Spotify</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Open Wikipedia</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Tell me a joke</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Give me a quote</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Tell me a riddle</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Tell me a tongue twister</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Give me some advice</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Give me a hug.</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Give me a haiku.</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Tell me interesting facts.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="mx-16">
+                    <p class="font-bold text-2xl text-center mb-5">Questions</p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">What is U Matter?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">What is the time?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">How are you?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Who are you?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">What is your name?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">What is your favorite color?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Are you happy?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Are you smart?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Are you stupid?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">What do you want when you grow up?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Who lives in a pineapple under the sea?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">[Say anything], who's the fairest of them all?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Do you want to build a snowman?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Do you want to take over the world?</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Do you love me?</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="mx-16">
+                    <p class="font-bold text-2xl text-center mb-5">Compliments</p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You're amazing</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You're funny</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You're awesome</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You're wonderful</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You are great</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You are sweet</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You're the best</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">You're beautiful</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="mx-16">
+                    <p class="font-bold text-2xl text-center mb-5">Games</p>
+                    <p class="mb-2">Instruction: Say your choice between rock, paper and scissors.</p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Rock</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">Paper</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">scissors</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <div class="mx-16">
+                    <p class="font-bold text-2xl text-center mb-5">More</p>
+                    <ul class="flex flex-wrap gap-2">
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“It's my birthday!”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“May the force be with you”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Use the force”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Live long and prosper”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“I'll be back.”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Why so serious?”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Is this the real life?”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Never gonna give you up”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“See you later alligator”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Roses are red, violets are blue”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Knock knock”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Mic test”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“I'm sad”</li>
+                        <li class="bg-[#1A4D2E] text-white px-4 py-2 rounded-full">“Marco”</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="absolute z-30 flex -translate-x-1/2 space-x-3 rtl:space-x-reverse bottom-5 left-1/2">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="5"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="6"></button>
+        </div>
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-[#1A4D2E] rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-[#1A4D2E] rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <div class="flex justify-center">
+        <a id="lets-chat" class="flex items-center justify-center bg-[#1A4D2E] px-4 py-3 rounded-3xl w-[10%] text-white mt-4" href="#p">Let's Chat!</a>
+    </div> -->
+    
+    <script src="hope.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js" integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
