@@ -75,7 +75,7 @@ Open the index.html file in your preferred web browser to start exploring U Matt
 ## Contributions
 Contributions are always welcome!
 
-We welcome contributions to enhance the L'Oréal. If you'd like to contribute, please follow these steps:
+We welcome contributions to enhance the U Matter. If you'd like to contribute, please follow these steps:
 
 - **Fork the Repository:** Fork the repository to your GitHub account.
 
